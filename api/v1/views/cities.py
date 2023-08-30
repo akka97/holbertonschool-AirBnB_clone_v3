@@ -21,6 +21,8 @@ def get_cities(state_id):
     if not state:
         abort(404)
     for city in state.cities:
+        if not city:
+            print('test')
         list_cities.append(city.to_dict())
     print(list_cities)
 
